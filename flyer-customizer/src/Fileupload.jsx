@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDropzone } from 'react-dropzone';
 
 const FileUpload = ({ onUploadTemplate, onUploadImage }) => {
-  const { getRootProps, getInputProps } = useDropzone({
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles) => {
       if (acceptedFiles.length) {
         if (acceptedFiles[0].type.startsWith('image/')) {
@@ -17,9 +17,18 @@ const FileUpload = ({ onUploadTemplate, onUploadImage }) => {
 
   return (
     <div>
-      <div {...getRootProps()}>
+      <div
+        {...getRootProps()}
+        style={{
+          border: '2px dashed #ccc',
+          padding: '20px',
+          textAlign: 'center',
+          cursor: 'pointer',
+          backgroundColor: isDragActive ? '#e0e0e0' : '#f9f9f9',
+        }}
+      >
         <input {...getInputProps()} />
-        <button>Drag & drop a flyer template or image here, or click to select</button>
+        <p>Drag & drop a flyer template or image here, or click to select</p>
       </div>
     </div>
   );

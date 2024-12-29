@@ -10,6 +10,7 @@ function App() {
           <h1>Welcome to Flyer Weaponizer</h1>
            <p> Customize your flyer here</p>
            <FlyerCustomizer />
+           <FlyerCustomizer />
        </div>
      </div>
    )
