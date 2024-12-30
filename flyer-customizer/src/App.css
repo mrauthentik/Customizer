@@ -20,3 +20,12 @@ button{
           align-items: center;
           overflow: hidden;
 }
+
+.crop-btn{
+  width: 20%;
+  color: #000;
+  background-color: skyblue;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}

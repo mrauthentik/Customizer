@@ -67,7 +67,7 @@ const FlyerCustomizer = () => {
                 autoCropArea={0.8}
                 onInitialized={(instance) => setCropper(instance)}
               />
-              <button onClick={onCrop}>Crop</button>
+              <button className='crop-btn' onClick={onCrop}>Crop</button>
             </div>
           ) : (
             // Draggable cropped image or original if not cropped
