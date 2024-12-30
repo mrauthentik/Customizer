@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDropzone } from 'react-dropzone';
 
 const FileUpload = ({ onUploadTemplate, onUploadImage }) => {
@@ -12,7 +11,7 @@ const FileUpload = ({ onUploadTemplate, onUploadImage }) => {
         }
       }
     },
-    multiple: false,
+    multiple:false,
   });
 
   return (
